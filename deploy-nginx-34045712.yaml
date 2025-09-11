@@ -6,17 +6,13 @@ metadata:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-pod
+  name: nginx-pod-34045712
   namespace: test-orc1
   labels:
     app: nginx
 spec:
   containers:
-  - name: nginx-container
-<<<<<<< HEAD
+  - name: nginx-container-34045712
     image: cgr.dev/chainguard/nginx
-=======
-    image: cgr.dev/chainguard/nginx:1.28
->>>>>>> 7f6b813 (commit updated yaml file)
     ports:
     - containerPort: 80
