@@ -13,11 +13,7 @@ metadata:
 spec:
   containers:
   - name: nginx-container
-<<<<<<< HEAD
     image: cgr.dev/chainguard/nginx
-=======
-    image: cgr.dev/chainguard/nginx:1.28
->>>>>>> 7f6b813 (commit updated yaml file)
     ports:
     - containerPort: 80
 ---
