@@ -26,7 +26,7 @@ metadata:
     app: nginx
 spec:
   containers:
-  - name: nginx-container
+  - name: nginx-container-test
     image: cgr.dev/chainguard/nginx
     ports:
     - containerPort: 8080
