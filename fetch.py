@@ -17,6 +17,7 @@ def change_yaml_names(yaml_content):
     modified_docs = []
     
     for doc in documents:
+        
         if doc and 'kind' in doc and doc['kind'] == 'Pod':
             # Check for the existence of nested keys before accessing
             if 'metadata' in doc and 'name' in doc['metadata']:
@@ -63,7 +64,8 @@ try:
     
     # Create the Kubernetes resource using the newly created YAML file
     print(f"Applying Kubernetes configuration from {file_path_for_creation}...")
-    os.system(f"kubectl create -f {file_path_for_creation} -n test")
+    os.system(f"kubectl apply -f {file_path_for_creation} -n test-orc1")
+    os.remove(file_path_for_creation)
 
 except requests.exceptions.RequestException as e:
     # Handle any errors that occur during the request
