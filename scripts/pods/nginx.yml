@@ -18,9 +18,25 @@ spec:
     - containerPort: 80
 ---
 apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  namespace: test-orc1
+  labels:
+    app: nginx
+spec:
+  containers:
+  - name: nginx-container
+    image: cgr.dev/chainguard/nginx
+    ports:
+    - containerPort: 8080
+---
+
+apiVersion: v1
 kind: Service
 metadata:
   name: nginx-service
+  namespace: test-orc1
 spec:
   selector:
     app.kubernetes.io/name: nginx-pod
