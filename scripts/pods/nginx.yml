@@ -6,7 +6,7 @@ metadata:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-pod
+  name: nginx-pod-1
   namespace: test-orc1
   labels:
     app: nginx
@@ -20,7 +20,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-pod
+  name: nginx-pod-2
   namespace: test-orc1
   labels:
     app: nginx
