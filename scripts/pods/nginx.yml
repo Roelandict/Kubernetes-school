@@ -24,6 +24,7 @@ metadata:
   namespace: test-orc1
   labels:
     app: nginx
+    author: Roeland
 spec:
   containers:
   - name: nginx-container-test
